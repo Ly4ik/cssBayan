@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(230, 227, 210);
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+    text-align: center;
+    margin: 0 auto;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+label {
+    display: block;
+    width: 80%;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ico {
+    width: 1rem;
+    height: 1rem;
+    transition: all 2s;
+}
+
+.mem {
+    display: block;
+    margin: auto;
+    padding-top: 1rem;
+    max-width: 80%;
+    max-height: 0; 
+
+    opacity: 0;
+    transition: all 2s;
+}
+
+label:hover > .mem {
+    opacity: 1;
+    max-height: 80%; 
+}
+
+input {
+    appearance: none;
+}
+
+input:checked ~ .mem {
+    opacity: 1;
+    max-height: 80%; 
+}
+
+label:hover .ico {
+    transform: rotate(45deg);
+}
+
+input:checked ~ * .ico {
+    transform: rotate(45deg); 
+}
