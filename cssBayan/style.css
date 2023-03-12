@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     min-width: 100vw;
     min-height: 100vh;
@@ -8,7 +12,9 @@ body {
 }
 
 .footer {
-    text-align: center;
+    width: 80%;
+    padding-top: 1.5rem;
+    text-align: left;
     margin: 0 auto;
 }
 .main {
@@ -28,6 +34,8 @@ label {
 .wrapper {
     display: flex;
     justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 0.2rem solid rgb(124, 124, 124);
 }
 
 .ico {
@@ -39,17 +47,11 @@ label {
 .mem {
     display: block;
     margin: auto;
-    padding-top: 1rem;
     max-width: 80%;
     max-height: 0; 
 
     opacity: 0;
     transition: all 2s;
-}
-
-label:hover > .mem {
-    opacity: 1;
-    max-height: 80%; 
 }
 
 input {
@@ -61,10 +63,36 @@ input:checked ~ .mem {
     max-height: 80%; 
 }
 
-label:hover .ico {
-    transform: rotate(45deg);
-}
-
 input:checked ~ * .ico {
     transform: rotate(45deg); 
+}
+
+@media (min-width: 320px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (min-width: 820px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (min-width: 1400px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media (hover: hover) {
+
+    label:hover > .mem {
+        opacity: 1;
+        max-height: 80%; 
+    }
+
+    label:hover .ico {
+        transform: rotate(45deg);
+    }
 }
