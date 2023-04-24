@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(230, 227, 210);
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+    width: 80%;
+    padding-top: 1.5rem;
+    text-align: left;
+    margin: 0 auto;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+label {
+    display: block;
+    width: 80%;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 0.2rem solid rgb(124, 124, 124);
+}
+
+.ico {
+    width: 1rem;
+    height: 1rem;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.mem {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 0; 
+    opacity: 0;
+    transition: all 1s;
+}
+
+input {
+    appearance: none;
+}
+
+input:checked ~ .mem {
+    opacity: 1;
+    max-height: 80%; 
+}
+
+input:checked ~ * .ico {
+    transform: rotate(45deg); 
+}
+
+@media (min-width: 320px) {
+
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (min-width: 820px) {
+
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    html {
+        font-size: 100%;
+    }
+}
+
+@media (hover: hover) {
+
+    label:hover > .mem {
+        opacity: 1;
+        max-height: 80%; 
+    }
+
+    label:hover .ico {
+        opacity: 1;
+        transform: rotate(45deg);
+    }
+}
